@@ -1,3 +1,16 @@
+Metadata-Version: 2.4
+Name: funding_rate_monitor
+Version: 0.1.0
+Summary: Funding rate monitor bot with Telegram alerts for crypto perpetual futures
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.27
+Requires-Dist: tenacity>=8.2
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23; extra == "dev"
+Requires-Dist: respx>=0.21; extra == "dev"
+
 # Funding Rate Monitor
 
 A Python bot that monitors perpetual futures **funding rates** across multiple exchanges and sends **Telegram alerts** when rates exceed a configurable threshold.

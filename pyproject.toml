@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "funding_rate_monitor"
+version = "0.1.0"
+description = "Funding rate monitor bot with Telegram alerts for crypto perpetual futures"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27",
+    "tenacity>=8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "respx>=0.21",
+]
+
+[project.scripts]
+funding-rate-monitor = "funding_rate_monitor.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["funding_rate_monitor*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
