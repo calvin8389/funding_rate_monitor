@@ -1,2 +1,0 @@
-[console_scripts]
-funding-rate-monitor = funding_rate_monitor.__main__:main
